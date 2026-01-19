@@ -1,19 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Delete Student</title>
-</head>
-<body>
-    <h1>Delete Student</h1>
+{% extends "base.html" %}
 
-    <p>Are you sure you want to delete <b>{{ student.name }}</b>?</p>
+{% block title %}Delete Student{% endblock %}
 
-    <form method="POST">
-        {% csrf_token %}
-        <button type="submit">Yes, Delete</button>
-    </form>
+{% block content %}
+<h1>Delete Student</h1>
 
-    <br>
-    <a href="{% url 'student_list' %}">Cancel</a>
-</body>
-</html>
+<p>Are you sure you want to delete <b>{{ student.name }}</b>?</p>
+
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Yes, Delete</button>
+</form>
+{% endblock %}

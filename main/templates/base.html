@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Student App{% endblock %}</title>
+    <style>
+        body { font-family: Arial; margin: 20px; }
+        a { text-decoration: none; }
+        .nav { margin-bottom: 15px; }
+        .nav a { margin-right: 10px; }
+        .box { border: 1px solid #ddd; padding: 15px; border-radius: 8px; }
+        button { padding: 6px 12px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div class="nav">
+    <a href="{% url 'student_list' %}">Home</a>
+    <a href="{% url 'student_add' %}">Add Student</a>
+</div>
+
+<div class="box">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>
