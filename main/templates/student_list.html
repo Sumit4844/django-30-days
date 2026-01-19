@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students</title>
+</head>
+<body>
+    <h1>Student List</h1>
+
+    {% if students %}
+        <ul>
+            {% for s in students %}
+                <li>{{ s.name }} - {{ s.age }} - {{ s.email }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No students found.</p>
+    {% endif %}
+</body>
+</html>
